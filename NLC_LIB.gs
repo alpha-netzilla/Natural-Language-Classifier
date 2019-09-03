@@ -20,8 +20,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-
 /* globals BaseService */
+var NLCLIB_MAX_TRAIN_RECORDS = 20000; // 学習レコード件数の上限
+var NLCLIB_MAX_TRAIN_CLASSES = 3000; // 学習クラス件数の上限
+var NLCLIB_MAX_TRAIN_STRINGS = 1024; // 学習テキストの最大文字数
+var NLCLIB_MAX_INST_CLFS = 8; // インスタンスあたりの分類器上限
 
 /**
  * NaturalLanguageClassifierV1オブジェクトを構築します。
@@ -40,7 +43,6 @@
  * @throws {Error} コンストラクタの呼び出しにはnew演算子が必要です
  */
 function NaturalLanguageClassifierV1(p_options) {
-
   // ====================================================
   // # Classify text
 
